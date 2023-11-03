@@ -3,8 +3,7 @@ return {
   lazy = true,
   opts = {
     highlights = {
-      buffer_selected = { bold = true, italic = true, bg = "#002b36" },
-      fill = { bg = "NONE" },
+      buffer_selected = { bold = true, italic = true },
       separator = { fg = "NONE" },
       separator_selected = { fg = "NONE" },
     },
