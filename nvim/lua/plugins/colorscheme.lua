@@ -1,5 +1,6 @@
 local util = require("tokyonight.util")
 return {
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "folke/tokyonight.nvim",
     lazy = true,

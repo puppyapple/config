@@ -2,17 +2,16 @@ return {
   "akinsho/bufferline.nvim",
   lazy = true,
   opts = {
-    highlights = {
-      buffer_selected = { bold = true, italic = true },
-      separator = { fg = "NONE" },
-      separator_selected = { fg = "NONE" },
-    },
+    highlights = {},
     options = {
+      max_name_length = 30,
+      -- tab_size = 30,
+      truncate_names = false,
       show_buffer_close_icons = false,
       always_show_bufferline = true,
       -- separator_style = "slant",
       separator_style = "thin",
-      indicator = { style = "underline" },
+      indicator = { style = "icon", icon = "" },
       offsets = {
         {
           filetype = "undotree",
