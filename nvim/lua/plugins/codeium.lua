@@ -1,11 +1,11 @@
 return {
-  'Exafunction/codeium.vim',
+  "jcdickinson/codeium.nvim",
+  event = "VeryLazy",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
+  },
   config = function()
-    -- Change '<C-g>' here to any keycode you like.
-    vim.keymap.set('i', '<c-i>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    vim.g.codeium_filetypes = { markdown = false }
-  end
+    require("codeium").setup({})
+  end,
 }

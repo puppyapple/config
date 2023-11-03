@@ -6,11 +6,11 @@ return {
   config = function()
     require("copilot").setup({
       panel = {
-        enabled = true,
+        enabled = false,
         auto_refresh = true,
       },
       suggestion = {
-        enabled = true,
+        enabled = false,
         auto_trigger = true,
         accept = false, -- disable built-in keymapping
         keymap = {
@@ -18,8 +18,8 @@ return {
           next = "<C-n>",
           accept = "<C-i>",
           refresh = "gc",
-          open = "<C-c>"
-        }
+          open = "<C-c>",
+        },
       },
     })
 
