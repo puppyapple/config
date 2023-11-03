@@ -2,9 +2,17 @@ return {
   "akinsho/bufferline.nvim",
   lazy = true,
   opts = {
+    highlights = {
+      buffer_selected = { bold = true, italic = true, bg = "#002b36" },
+      fill = { bg = "NONE" },
+      separator = { fg = "NONE" },
+      separator_selected = { fg = "NONE" },
+    },
     options = {
+      show_buffer_close_icons = false,
       always_show_bufferline = true,
-      separator_style = "slant",
+      -- separator_style = "slant",
+      separator_style = "thin",
       indicator = { style = "underline" },
       offsets = {
         {
