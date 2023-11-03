@@ -1,0 +1,32 @@
+{
+  "read_file": {
+    "prefix": "read_file",
+    "body": [
+      "with open(filename) as f:",
+      "    content = f.readlines()",
+      "# you may also want to remove whitespace characters like `\\n` at the end of each line",
+      "content = [x.strip() for x in content]"
+    ],
+    "description": "read from file"
+  },
+  "json_dump_string": {
+    "prefix": "jds",
+    "body": ["json.dumps(object, ensure_ascii=False)"],
+    "description": "dump python object to json string"
+  },
+  "json_dump_file": {
+    "prefix": "jdf",
+    "body": ["json.dump(object, open(filename, 'w'), ensure_ascii=False)"],
+    "description": "dump python object to json file"
+  },
+  "json_load_string": {
+    "prefix": "jls",
+    "body": ["json.loads(json_string)"],
+    "description": "load python object from json string"
+  },
+  "json_load_file": {
+    "prefix": "jlf",
+    "body": ["json.load(open(filename, 'r'))"],
+    "description": "load python object from json file"
+  }
+}
