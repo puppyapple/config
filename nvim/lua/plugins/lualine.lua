@@ -19,12 +19,16 @@ local Util = require("lazyvim.util")
 -- mode
 local mode = {
   function()
-    return "👽"
+    return " 👽"
   end,
   padding = { left = 0, right = 0 },
   color = {},
   cond = nil,
-  separator = { left = "", right = "" },
+  separator = {
+    -- left = "",
+    left = "",
+    right = "",
+  },
   left_padding = 2,
 }
 

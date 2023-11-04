@@ -1,6 +1,7 @@
 return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   { "jackMort/ChatGPT.nvim", enabled = false },
+  { "lukas-reineke/headlines.nvim", enabled = false },
   -- { "nvim-tree/nvim-tree.lua", enabled = false },
   -- { "jose-elias-alvarez/null-ls.nvim", enabled = false },
   { "folke/neoconf.nvim", enabled = false },

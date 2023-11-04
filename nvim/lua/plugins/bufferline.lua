@@ -4,7 +4,7 @@ return {
   opts = {
     highlights = {},
     options = {
-      max_name_length = 30,
+      max_name_length = 20,
       -- tab_size = 30,
       truncate_names = false,
       show_buffer_close_icons = false,
