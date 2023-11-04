@@ -15,6 +15,7 @@ M.colors = {
 	text_fg = "#c0c0c0",
 }
 
+local GLYPH_SEMI_CIRCLE_LEFT = ""
 -- The powerline < symbol
 local LEFT_ARROW = utf8.char(0xe0b3)
 -- The filled in variant of the < symbol
@@ -119,8 +120,8 @@ M.set_test = function(pane)
 			hostname = wezterm.hostname()
 		end
 
-		table.insert(M.cells, cwd)
-		table.insert(M.cells, hostname)
+		-- table.insert(M.cells, cwd)
+		-- table.insert(M.cells, hostname)
 	end
 
 	-- I like my date/time in this style: "Wed Mar 3 08:14"
@@ -168,19 +169,19 @@ M.setup = function()
 		-- Translate a cell into elements
 		function push(text, is_last)
 			local cell_no = num_cells + 1
+			if not is_last then
+				table.insert(elements, { Foreground = { Color = colors[cell_no] } })
+				table.insert(elements, { Text = GLYPH_SEMI_CIRCLE_LEFT })
+			end
 			table.insert(elements, { Foreground = { Color = M.colors.text_fg } })
 			table.insert(elements, { Background = { Color = colors[cell_no] } })
 			table.insert(elements, { Text = " " .. text .. " " })
-			if not is_last then
-				table.insert(elements, { Foreground = { Color = colors[cell_no + 1] } })
-				table.insert(elements, { Text = SOLID_LEFT_ARROW })
-			end
 			num_cells = num_cells + 1
 		end
 
 		while #M.cells > 0 do
 			local cell = table.remove(M.cells, 1)
-			push(cell, #M.cells == 0)
+			push(cell, false)
 		end
 
 		window:set_right_status(wezterm.format(elements))

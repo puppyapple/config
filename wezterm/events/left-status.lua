@@ -7,7 +7,9 @@ M.colors = {
 	battery_bg = "#181825",
 	separator_fg = "#74c7ec",
 	separator_bg = "#181825",
+	server_bg = "#fc589a",
 }
+local GLYPH_SEMI_CIRCLE_RIGHT = ""
 M.cells = {} -- wezterm FormatItems (ref: https://wezfurlong.org/wezterm/config/lua/wezterm/format.html)
 M.push = function(text, icon, fg, bg, separate)
 	table.insert(M.cells, { Foreground = { Color = fg } })
@@ -16,16 +18,16 @@ M.push = function(text, icon, fg, bg, separate)
 	table.insert(M.cells, { Text = icon .. " " .. text .. " " })
 
 	if separate then
-		table.insert(M.cells, { Foreground = { Color = M.colors.separator_fg } })
+		table.insert(M.cells, { Foreground = { Color = M.colors.server_bg } })
 		table.insert(M.cells, { Background = { Color = M.colors.separator_bg } })
-		table.insert(M.cells, { Text = M.separator_char })
+		table.insert(M.cells, { Text = GLYPH_SEMI_CIRCLE_RIGHT })
 	end
 
 	table.insert(M.cells, "ResetAttributes")
 end
 
 M.set_workspace = function(window)
-	M.push(window:active_workspace(), " 󰣞", M.colors.battery_fg, M.colors.battery_bg, false)
+	M.push(window:active_workspace(), " 󰣞", M.colors.battery_fg, M.colors.server_bg, true)
 end
 
 M.setup = function()

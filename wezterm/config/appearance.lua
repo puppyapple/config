@@ -7,7 +7,7 @@ return {
 	max_fps = 100,
 	front_end = "WebGpu",
 	webgpu_power_preference = "HighPerformance",
-	underline_position = -4,
+	underline_position = -6,
 	underline_thickness = 3,
 
 	-- color scheme
