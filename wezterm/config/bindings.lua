@@ -28,7 +28,7 @@ local keys = {
 	-- tabs --
 	-- tabs: spawn+close
 	{ key = "t", mods = mod.SUPER, action = act.SpawnTab("DefaultDomain") },
-	{ key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "Server" }) },
+	{ key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "RServer" }) },
 	{ key = "w", mods = mod.SUPER, action = act.CloseCurrentTab({ confirm = false }) },
 
 	-- tabs: navigation
@@ -62,8 +62,8 @@ local keys = {
 	-- panes: navigation
 	{ key = "k", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Up") },
 	{ key = "j", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Down") },
-	{ key = "h", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Left") },
-	{ key = "l", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Right") },
+	{ key = "[", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Left") },
+	{ key = "]", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Right") },
 
 	-- key-tables --
 	-- resizes fonts

@@ -26,7 +26,8 @@ M.setup = function()
 		-- runs some docker containners for home automation
 		local tab, pane, window = mux.spawn_window({
 			workspace = "Server",
-			domain = { DomainName = "Server" },
+			-- domain = { DomainName = "SSH:ubuntu" },
+			domain = { DomainName = "RServer" },
 		})
 		-- local tab, server_pane, window = mux.spawn_window({
 		-- 	workspace = "Server",
