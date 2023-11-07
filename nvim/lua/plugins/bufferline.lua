@@ -2,7 +2,19 @@ return {
   "akinsho/bufferline.nvim",
   lazy = true,
   opts = {
-    highlights = {},
+    highlights = {
+      indicator_selected = { bg = "#F5C2E7", fg = "#F5C2E7", underline = true },
+      -- fill = {
+      --   bg = {
+      --     attribute = "bg",
+      --     highlight = "Pmenu",
+      --   },
+      -- },
+      -- background = {
+      --   fg = { attribute = "fg", highlight = "Pmenu" },
+      --   bg = { attribute = "bg", highlight = "Pmenu" },
+      -- },
+    },
     options = {
       max_name_length = 20,
       -- tab_size = 30,
@@ -11,7 +23,7 @@ return {
       always_show_bufferline = true,
       -- separator_style = "slant",
       separator_style = "thin",
-      indicator = { style = "icon", icon = "" },
+      indicator = { style = "icon", icon = " 󰂮 " },
       offsets = {
         {
           filetype = "undotree",
@@ -22,8 +34,9 @@ return {
         {
           filetype = "NvimTree",
           text = "Explorer",
-          highlight = "PanelHeading",
-          padding = 1,
+          highlight = "Directory",
+          separator = true,
+          -- padding = 0.3,
         },
         {
           filetype = "DiffviewFiles",
