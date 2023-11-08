@@ -41,9 +41,8 @@ map("n", "gl", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
 map("n", "<leader>lu", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
--- map("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
--- map("n", "<C-t>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
--- map("t", "<C-t>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("n", "<C-/>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
+map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 map("n", "<leader>gg", function()
   Util.terminal.open(
     { "lazygit" },
@@ -55,7 +54,7 @@ map("n", "<leader>gG", function()
 end, { desc = "Lazygit (cwd)" })
 map("n", "<leader>gd", "<cmd>DiffviewFileHistory %<cr>", { desc = "Git diff view" })
 map("n", "<leader>xd", "<cmd>TroubleClose<cr>", { desc = "Close Trouble Window" })
-map("n", "<leader>fR", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+map("n", "<leader>fr", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
   desc = "Search on current file",
 })
 map("n", "<leader>fS", "<cmd>lua require('spectre.actions').run_replace()<CR>", { desc = "Confirm Replace" })

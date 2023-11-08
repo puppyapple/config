@@ -3,7 +3,7 @@ return {
   keys = {
     { "<leader>sr", false },
     {
-      "<leader>fr",
+      "<leader>fR",
       function()
         require("spectre").open()
       end,
