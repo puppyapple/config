@@ -62,6 +62,7 @@ map("n", "<leader>nf", "<cmd>Neogen func<CR>", { desc = "Function docstring" })
 map("n", "<leader>nF", "<cmd>Neogen file<CR>", { desc = "File docstring" })
 map("n", "<leader>nc", "<cmd>Neogen class<CR>", { desc = "Class docstring" })
 map("n", "<leader>nt", "<cmd>Neogen class<CR>", { desc = "Type docstring" })
+map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { desc = "Quickfix List (Trouble)" })
 
 -- map({ "n", "v" }, "<leader>cc", "<cmd>ChatGPT<CR>", { desc = "ChatGPT" })
 -- map({ "n", "v" }, "<leader>ce", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit with instruction" })
