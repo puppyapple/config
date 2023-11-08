@@ -24,19 +24,14 @@ M.setup = function()
 
 		-- A workspace for interacting with a local machine that
 		-- runs some docker containners for home automation
-		local tab, pane, window = mux.spawn_window({
-			workspace = "Server",
-			-- domain = { DomainName = "SSH:ubuntu" },
-			domain = { DomainName = "RServer" },
-		})
-		-- local tab, server_pane, window = mux.spawn_window({
+		-- local tab, pane, window = mux.spawn_window({
 		-- 	workspace = "Server",
-		-- 	-- domain = { DomainName = "Server" },
+		-- 	-- domain = { DomainName = "SSH:ubuntu" },
+		-- 	domain = { DomainName = "RServer" },
 		-- })
-		-- server_pane:send_text("server\n")
 
 		-- We want to startup in the coding workspace
-		mux.set_active_workspace("Server")
+		mux.set_active_workspace("MAC")
 	end)
 end
 return M

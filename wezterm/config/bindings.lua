@@ -28,7 +28,8 @@ local keys = {
 	-- tabs --
 	-- tabs: spawn+close
 	{ key = "t", mods = mod.SUPER, action = act.SpawnTab("DefaultDomain") },
-	{ key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "RServer" }) },
+	{ key = "t", mods = mod.SUPER_REV, action = act.AttachDomain("RServer") },
+	-- { key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "RServer" }) },
 	{ key = "w", mods = mod.SUPER, action = act.CloseCurrentTab({ confirm = false }) },
 
 	-- tabs: navigation

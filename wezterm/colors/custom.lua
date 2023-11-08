@@ -20,6 +20,7 @@ local mocha = {
 	overlay2 = "#9399b2",
 	overlay1 = "#7f849c",
 	overlay0 = "#6c7086",
+	overlay3 = "#ba136c",
 	surface2 = "#585b70",
 	surface1 = "#45475a",
 	surface0 = "#313244",
@@ -86,7 +87,7 @@ local colorscheme = {
 		[17] = mocha.rosewater,
 	},
 	scrollbar_thumb = mocha.surface2,
-	split = mocha.overlay0,
+	split = mocha.overlay3,
 	compose_cursor = mocha.flamingo, -- nightbuild only
 }
 
