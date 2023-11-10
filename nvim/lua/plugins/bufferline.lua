@@ -23,7 +23,7 @@ return {
       always_show_bufferline = true,
       -- separator_style = "slant",
       separator_style = "thin",
-      indicator = { style = "icon", icon = " 󰂮 " },
+      indicator = { style = "icon", icon = " 📝" },
       offsets = {
         {
           filetype = "undotree",

@@ -20,21 +20,22 @@ local pyright_opts = {
     python = {
       analysis = {
         autoSearchPaths = true,
-        diagnosticMode = "workspace",
+        diagnosticMode = "openFilesOnly",
         useLibraryCodeForTypes = true,
         -- reportGeneralTypeIssues = true,
+        stubPath = "~/.local/share/nvim/lazy/python-type-stubs",
       },
     },
   },
   single_file_support = true,
 }
 local format = function()
-  require("lazyvim.plugins.lsp.format").format({ force = true })
+  require("lazyvim.util").format({ force = true })
 end
 return {
   "neovim/nvim-lspconfig",
   init = function()
-    require('lspconfig.ui.windows').default_options.border = 'rounded'
+    require("lspconfig.ui.windows").default_options.border = "rounded"
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = { "<leader>ca", false, mode = { "n", "v" } }
     keys[#keys + 1] = { "<leader>cA", false }
@@ -44,6 +45,8 @@ return {
     keys[#keys + 1] = { "<leader>cf", false }
     keys[#keys + 1] = { "<leader>cl", false }
     keys[#keys + 1] = { "<leader>cr", false }
+    keys[#keys + 1] = { "<leader>co", false }
+    keys[#keys + 1] = { "<leader>cv", false }
     keys[#keys + 1] = {
       "<leader>la",
       vim.lsp.buf.code_action,

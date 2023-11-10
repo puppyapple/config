@@ -12,6 +12,7 @@ vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "$")
 vim.keymap.set("v", "Y", "<Plug>OSCYankVisual")
 vim.api.nvim_del_keymap("n", "<leader>l")
+vim.api.nvim_del_keymap("n", "<leader>cd")
 
 local Util = require("lazyvim.util")
 

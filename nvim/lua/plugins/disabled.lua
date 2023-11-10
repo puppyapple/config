@@ -8,6 +8,7 @@ return {
   -- { "folke/edgy.nvim",             enabled = false },
   -- { "Exafunction/codeium.nvim", enabled = false },
   { "Exafunction/codeium.vim", enabled = false },
+  { "linux-cultist/venv-selector.nvim", enabled = false },
   -- { "github/copilot.vim",          enabled = false },
   -- { "zbirenbaum/copilot.lua", enabled = false },
   -- { "RRethy/vim-illuminate",       enabled = false },
