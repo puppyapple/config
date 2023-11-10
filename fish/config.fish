@@ -18,4 +18,5 @@ alias ll="exa -abghl --icons --color-scale"
 set -Ux LS_COLORS "$(vivid generate one-dark)"
 zoxide init fish | source
 fzf_configure_bindings --directory=\cf --git_status=\cg
+# bind \ci accept-autosuggestion
 # export TERM=alacritty
