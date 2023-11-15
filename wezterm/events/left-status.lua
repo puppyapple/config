@@ -7,7 +7,7 @@ M.colors = {
 	battery_bg = "#181825",
 	separator_fg = "#74c7ec",
 	separator_bg = "#181825",
-	server_bg = "#fc589a",
+	server_bg = "#fc56b1",
 }
 local GLYPH_SEMI_CIRCLE_RIGHT = ""
 M.cells = {} -- wezterm FormatItems (ref: https://wezfurlong.org/wezterm/config/lua/wezterm/format.html)
