@@ -116,10 +116,10 @@ return {
           -- cond = conditions.hide_in_width,
         },
         -- stylua: ignore
-        -- {
-        --   function() return require("nvim-navic").get_location() end,
-        --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-        -- },
+        {
+          function() return require("nvim-navic").get_location() end,
+          cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+        },
       },
       lualine_x = {
         -- stylua: ignore
@@ -141,6 +141,11 @@ return {
           color = Util.ui.fg("Debug"),
         },
         { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = Util.ui.fg("Special") },
+      },
+      lualine_z = {
+        function()
+          return " " .. os.date("%Y-%m-%d %R", os.time())
+        end,
       },
     },
   },
