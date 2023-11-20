@@ -31,12 +31,12 @@ return {
     defaults = {
       mappings = {
         i = {
-          ["<A-q>"] = send_selected_to_qflist_and_open,
-          ["<C-q>"] = send_all_to_qflist_and_open,
+          ["<C-q>"] = send_selected_to_qflist_and_open,
+          ["<A-q>"] = send_all_to_qflist_and_open,
         },
         n = {
-          ["<A-q>"] = send_selected_to_qflist_and_open,
-          ["<C-q>"] = send_all_to_qflist_and_open,
+          ["<C-q>"] = send_selected_to_qflist_and_open,
+          ["<A-q>"] = send_all_to_qflist_and_open,
         },
       },
     },

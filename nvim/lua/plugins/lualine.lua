@@ -83,7 +83,7 @@ local python_env = {
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
-    options = { section_separators = { left = "", right = "" }, component_separators = "|" },
+    options = { section_separators = { left = "", right = "" }, component_separators = "|", theme = "tokyonight" },
     sections = {
       lualine_a = { mode },
       lualine_b = { { "branch", color = { fg = colors.purple } } },
@@ -97,13 +97,13 @@ return {
             removed = icons.git.removed,
           },
         },
-        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        {
-          "filename",
-          color = { fg = colors.cyan },
-          path = 1,
-          symbols = { modified = "  ", readonly = "", unnamed = "" },
-        },
+        -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+        -- {
+        --   "filename",
+        --   color = { fg = colors.cyan },
+        --   path = 1,
+        --   symbols = { modified = "  ", readonly = "", unnamed = "" },
+        -- },
         {
           "diagnostics",
           sources = { "nvim_diagnostic" },
@@ -144,7 +144,7 @@ return {
       },
       lualine_z = {
         function()
-          return " " .. os.date("%Y-%m-%d %R", os.time())
+          return " " .. os.date("%m-%d %R", os.time())
         end,
       },
     },
