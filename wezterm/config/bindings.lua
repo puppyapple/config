@@ -28,6 +28,7 @@ local keys = {
 	-- tabs --
 	-- tabs: spawn+close
 	{ key = "t", mods = mod.SUPER, action = act.SpawnTab("DefaultDomain") },
+	{ key = "t", mods = "SUPER|SHIFT", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "t", mods = mod.SUPER_REV, action = act.AttachDomain("RServer") },
 	-- { key = "t", mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = "RServer" }) },
 	{ key = "w", mods = mod.SUPER, action = act.CloseCurrentTab({ confirm = false }) },
@@ -168,7 +169,7 @@ local mouse_bindings = {
 
 return {
 	disable_default_key_bindings = true,
-	leader = { key = "Space", mods = "SUPER|SHIFT" },
+	leader = { key = "Space", mods = "SUPER|SHIFT", timemout_miliseconds = 1000 },
 	keys = keys,
 	key_tables = key_tables,
 	mouse_bindings = mouse_bindings,
