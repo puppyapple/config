@@ -7,5 +7,8 @@ return {
   },
   opts = {
     auto_close = true,
+    action_keys = {
+      open_vsplit = { "l" },
+    },
   },
 }

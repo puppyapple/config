@@ -97,13 +97,13 @@ return {
             removed = icons.git.removed,
           },
         },
-        -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        -- {
-        --   "filename",
-        --   color = { fg = colors.cyan },
-        --   path = 1,
-        --   symbols = { modified = "  ", readonly = "", unnamed = "" },
-        -- },
+        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+        {
+          "filename",
+          color = { fg = colors.cyan },
+          path = 1,
+          symbols = { modified = "  ", readonly = "", unnamed = "" },
+        },
         {
           "diagnostics",
           sources = { "nvim_diagnostic" },
@@ -116,10 +116,11 @@ return {
           -- cond = conditions.hide_in_width,
         },
         -- stylua: ignore
-        {
-          function() return require("nvim-navic").get_location() end,
-          cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-        },
+        -- {
+        --   function() return require("nvim-navic").get_location() end,
+        --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+        --   color = { fg = colors.green, bg = colors.bg },
+        -- },
       },
       lualine_x = {
         -- stylua: ignore
