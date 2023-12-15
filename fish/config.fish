@@ -7,6 +7,7 @@ status is-interactive &&
 # <<< conda initialize <<<
 #
 set PATH $PATH /opt/homebrew/bin
+set PATH $PATH /opt/local/bin
 set PATH $PATH /usr/local/bin
 set PATH $PATH /Users/zijunwu/.local/bin
 set PATH $PATH /Users/zijunwu/.dotfiles/bin

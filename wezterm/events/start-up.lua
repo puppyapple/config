@@ -22,8 +22,6 @@ M.setup = function()
 		-- may as well kick off a build in that pane
 		-- build_pane:send_text("cargo build\n")
 
-		-- A workspace for interacting with a local machine that
-		-- runs some docker containners for home automation
 		-- local tab, pane, window = mux.spawn_window({
 		-- 	workspace = "Server",
 		-- 	-- domain = { DomainName = "SSH:ubuntu" },
