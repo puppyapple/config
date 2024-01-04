@@ -125,7 +125,7 @@ alt - 3  : yabai -m display --focus 1
 
 # toggle window zoom
 # alt - d : yabai -m window --toggle zoom-parent
-shift + ctrl - m : yabai -m window --toggle zoom-fullscreen
+# shift + ctrl - m : yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
 # alt - e : yabai -m window --toggle split

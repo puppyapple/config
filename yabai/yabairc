@@ -27,7 +27,7 @@ yabai -m config mouse_action2 resize
 # 焦点跟随鼠标 默认off: 关闭  autoraise:自动提升 autofocus: 自动对焦
 yabai -m config focus_follows_mouse autofocus
 # 设置鼠标是否跟随当前活动窗口 默认 off: 关闭 on: 开启
-yabai -m config mouse_follows_focus off
+yabai -m config mouse_follows_focus on
 
 # 浮动窗口问题在顶部
 yabai -m config window_topmost on
@@ -38,7 +38,7 @@ yabai -m config window_shadow float
 yabai -m config window_opacity on
 # 配置活动窗口不透明度
 yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity 0.9
+yabai -m config normal_window_opacity 0.5
 yabai -m config window_opacity_duration 0.0
 
 # 在主显示器上的每个空间顶部添加 20 填充 底部添加 0 填充
@@ -59,5 +59,6 @@ yabai -m rule --add app="^访达$" manage=off
 yabai -m rule --add app="^向日葵远程控制$" manage=off
 yabai -m rule --add app="^QQ$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^Marta$" manage=off
 
 echo "yabai configuration loaded.."
