@@ -8,7 +8,7 @@ return {
 	-- font = wezterm.font(font, { weight = "DemiBold" }),
 	font = wezterm.font_with_fallback({
 		{ family = font, weight = "DemiBold" },
-		{ family = "PingFang HK", weight = "DemiBold" },
+		{ family = "PingFang SC", weight = "DemiBold" },
 	}),
 	-- font = wezterm.font_with_fallback({
 	-- 	font,

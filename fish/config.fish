@@ -13,7 +13,7 @@ set PATH $PATH /Users/zijunwu/.local/bin
 set PATH $PATH /Users/zijunwu/.dotfiles/bin
 set PATH $PATH /Users/zijunwu/.cargo/bin
 
-alias vim=/usr/local/bin/nvim
+alias vim=/opt/homebrew/bin/nvim
 # alias server="autossh -M 0 -t ubuntu"
 alias server="kitten ssh puppyapple@10.1.100.159"
 alias gpu="watch --color -n1 gpustat --color -cpu"

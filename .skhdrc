@@ -14,20 +14,23 @@ shift + alt - l : yabai -m window --swap east
 # shift + ctrl - j : yabai -m window --warp south
 # shift + ctrl - k : yabai -m window --warp north
 # shift + ctrl- l : yabai -m window --warp east
+
 # 浮动窗口设置 参考了Magent默认设置。因为之前用习惯了。。。。
 # 恢复原始窗口大小
-ctrl + alt - 0 : yabai -m space --balance
+ctrl + shift - 0 : yabai -m space --balance
 # 把浮动窗口左右平分整个屏幕  rows:cols:start-x:star-y:width:height  m行:n列:x:y:w:h
+# 最小化
+ctrl + shift - z : yabai -m window --minimize
 # 最大化
-ctrl + alt - return : yabai -m window --grid 1:1:0:0:1:1
+ctrl + shift - m : yabai -m window --toggle zoom-fullscreen
 # 2分屏上
-ctrl + alt - up     : yabai -m window --grid 2:1:0:0:2:1
-# 2分屏左
-ctrl + alt - left   : yabai -m window --grid 1:2:0:0:1:1
-# 2分屏右
-ctrl + alt - right  : yabai -m window --grid 1:2:1:1:1:1
+ctrl + shift - k : yabai -m window --grid 2:1:0:0:2:1 || yabai -m window --swap north
 # 2分屏下
-ctrl + alt - down   : yabai -m window --grid 2:1:0:1:2:1
+ctrl + shift - j : yabai -m window --grid 2:1:0:1:2:1 || yabai -m window --swap south
+# 2分屏左
+ctrl + shift - h : yabai -m window --grid 1:2:0:0:1:1 || yabai -m window --swap west
+# 2分屏右
+ctrl + shift - l : yabai -m window --grid 1:2:1:1:1:1 || yabai -m window --swap east
 # 4分屏左上
 ctrl + alt - u : yabai -m window --grid 2:2:0:0:1:1
 # 4分屏右上
@@ -46,7 +49,7 @@ ctrl + alt - f : yabai -m window --grid 1:3:1:0:1:1
 ctrl + alt - t : yabai -m window --grid 1:3:1:0:2:1
 # 3分屏右1
 ctrl + alt - g : yabai -m window --grid 1:3:3:0:1:1
-# 9分屏居中
+# 9分屏居
 ctrl + alt - c : yabai -m window --grid 3:3:1:1:1:1
 
 # 浮动/不浮动窗口 float / unfloat window and center on screen
@@ -105,7 +108,8 @@ alt - 2  : yabai -m display --focus 2
 alt - 3  : yabai -m display --focus 1
 
 # send window to monitor and follow focus
-# shift + ctrl - n : yabai -m window --display next; yabai -m display --focus next
+# shift + ctrl - n : yabai -m window --display next;yabai -m display --focus next
+# shift + ctrl - p : yabai -m window --display prev;yabai -m display --focus prev
 # ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
 
 # move floating window
@@ -125,7 +129,7 @@ alt - 3  : yabai -m display --focus 1
 
 # toggle window zoom
 # alt - d : yabai -m window --toggle zoom-parent
-# shift + ctrl - m : yabai -m window --toggle zoom-fullscreen
+# shift + ctrl - u : yabai -m window --toggle zoom-fullscreen
 
 # toggle window split type
 # alt - e : yabai -m window --toggle split
@@ -138,3 +142,6 @@ alt - 3  : yabai -m display --focus 1
 #           yabai -m window --toggle topmost;\
 #           yabai -m window --toggle pip
 
+# ctrl + shift - n : cur_window=$(yabai -m query --windows --window | jq '.id') && yabai -m window --display prev  || yabai -m window --display next && yabai -m window --focus ${cur_window}
+ctrl + shift - p : set cur_window $(yabai -m query --windows --window | jq '.id') &&  yabai -m window --display next && yabai -m window --focus {$cur_window}
+ctrl + shift - n : set cur_window $(yabai -m query --windows --window | jq '.id') &&  yabai -m window --display prev && yabai -m window --focus {$cur_window}
