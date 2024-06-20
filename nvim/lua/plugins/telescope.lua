@@ -1,16 +1,6 @@
-local Util = require("lazyvim.util")
 local actions = require("telescope.actions")
-local send_selected_to_qflist_and_open = function(...)
-  actions.send_selected_to_qflist(...)
-  require("trouble").toggle("quickfix")
-end
-local send_all_to_qflist_and_open = function(...)
-  actions.send_to_qflist(...)
-  require("trouble").toggle("quickfix")
-end
-
 return {
-  "nvim-telescope/telescope.nvim",
+  "ibhagwan/fzf-lua",
   keys = {
     { "<leader>fr", false },
     { "<leader>fR", false },
@@ -20,12 +10,13 @@ return {
     { "<leader>fF", false },
     { "<leader>fb", false },
     { "<leader>/", false },
-    { "<leader>st", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+    { "<leader>ba", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+    { "<leader>st", LazyVim.pick("live_grep"), desc = "Grep (root dir)" },
     { "<leader>ba", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-    { "<leader>sf", Util.telescope("files"), desc = "Find Files (root dir)" },
-    { "<leader>sF", Util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+    { "<leader>sf", LazyVim.pick("auto"), desc = "Find Files (root dir)" },
+    { "<leader>sF", LazyVim.pick("auto", { root = false }), desc = "Find Files (cwd)" },
     { "<leader>sr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
-    { "<leader>sR", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), desc = "Recent (cwd)" },
+    { "<leader>sR", LazyVim.pick("oldfiles", { cwd = vim.uv.cwd() }), desc = "Recent (cwd)" },
   },
   opts = {
     defaults = {

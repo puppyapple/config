@@ -42,8 +42,8 @@ map("n", "gl", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
 map("n", "<leader>lu", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
-map("n", "<C-/>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
-map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("n", "<C-`>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
+map("t", "<C-`>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 map("n", "<leader>gg", function()
   Util.terminal.open(
     { "lazygit" },
