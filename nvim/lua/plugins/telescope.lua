@@ -1,6 +1,6 @@
 local actions = require("telescope.actions")
 return {
-  "ibhagwan/fzf-lua",
+  "nvim-telescope/telescope.nvim",
   keys = {
     { "<leader>fr", false },
     { "<leader>fR", false },
