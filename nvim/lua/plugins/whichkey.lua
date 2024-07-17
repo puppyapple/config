@@ -1,10 +1,10 @@
 return {
   "folke/which-key.nvim",
   opts = {
-    window = {
+    win = {
       border = "single",
     },
-    defaults = {
+    spec = {
       ["<leader>l"] = { name = "+LSP" },
       ["<leader>c"] = { name = "+Code" },
       ["<leader>n"] = { name = "+Docstring(Neogen)" },
