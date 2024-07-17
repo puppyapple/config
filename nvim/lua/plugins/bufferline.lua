@@ -3,7 +3,8 @@ return {
   lazy = true,
   opts = {
     highlights = {
-      indicator_selected = { bg = "#F5C2E7", fg = "#F5C2E7", underline = true },
+      -- indicator_selected = { bg = "#F5C2E7" },
+      buffer_selected = { sp = "#ff0000" },
       -- fill = {
       --   bg = {
       --     attribute = "bg",
@@ -21,9 +22,9 @@ return {
       truncate_names = false,
       show_buffer_close_icons = false,
       always_show_bufferline = true,
-      -- separator_style = "slant",
       separator_style = "thin",
-      indicator = { style = "icon", icon = " 📝" },
+      -- indicator = { style = "icon", icon = " 📝" },
+      indicator = { style = "underline" },
       offsets = {
         {
           filetype = "undotree",
