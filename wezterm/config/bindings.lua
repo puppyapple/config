@@ -62,10 +62,10 @@ local keys = {
 	{ key = "w", mods = mod.SUPER_REV, action = act.CloseCurrentPane({ confirm = false }) },
 
 	-- panes: navigation
-	{ key = "k", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Up") },
-	{ key = "j", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Down") },
-	{ key = "[", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Left") },
-	{ key = "]", mods = mod.SUPER_REV, action = act.ActivatePaneDirection("Right") },
+	{ key = "k", mods = "ALT", action = act.ActivatePaneDirection("Up") },
+	{ key = "j", mods = "ALT", action = act.ActivatePaneDirection("Down") },
+	{ key = "h", mods = "ALT", action = act.ActivatePaneDirection("Left") },
+	{ key = "l", mods = "ALT", action = act.ActivatePaneDirection("Right") },
 
 	-- key-tables --
 	-- resizes fonts

@@ -14,6 +14,9 @@ set PATH $PATH /Users/zijunwu/.dotfiles/bin
 set PATH $PATH /Users/zijunwu/.cargo/bin
 set PATH $PATH /Users/zijunwu/.local/share/bob/nvim-bin
 
+set PATH $PATH /Applications/Docker.app/Contents/Resources/bin
+set PATH $PATH /Applications/WezTerm.app/Contents/MacOS
+
 alias vim=/Users/zijunwu/.local/share/bob/nvim-bin/nvim
 # alias server="autossh -M 0 -t ubuntu"
 alias server="kitten ssh puppyapple@10.1.100.159"
@@ -25,3 +28,7 @@ zoxide init fish | source
 fzf_configure_bindings --directory=\cf --git_status=\cg
 # bind \ci accept-autosuggestion
 # export TERM=alacritty
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/zijunwu/.cache/lm-studio/bin
+starship init fish | source

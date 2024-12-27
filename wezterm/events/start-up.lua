@@ -19,19 +19,13 @@ M.setup = function()
 			cwd = project_dir,
 			args = args,
 		})
-		-- may as well kick off a build in that pane
-		-- build_pane:send_text("cargo build\n")
 
-		local tab_1, pane_1, window_1 = mux.spawn_window({
-			workspace = "Ubuntu",
-			-- domain = { DomainName = "SSH:ubuntu" },
-			-- domain = { DomainName = "RServer" },
-			-- cwd = project_dir,
-			args = args,
-		})
+		-- local tab_1, pane_1, window_1 = mux.spawn_window({
+		-- 	workspace = "Ubuntu",
+		-- 	args = args,
+		-- })
 
 		-- We want to startup in the coding workspace
-		mux.set_active_workspace("Ubuntu")
 	end)
 end
 return M

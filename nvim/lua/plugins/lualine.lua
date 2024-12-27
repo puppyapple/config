@@ -15,6 +15,7 @@ local colors = {
 
 local icons = require("lazyvim.config").icons
 local Util = require("lazyvim.util")
+local Snacks = require("snacks")
 
 -- mode
 local mode = {
@@ -127,21 +128,27 @@ return {
         {
           function() return require("noice").api.status.command.get() end,
           cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-          color = Util.ui.fg("Statement"),
+          color = function() return { fg = Snacks.util.color("Statement") } end,
         },
         -- stylua: ignore
         {
           function() return require("noice").api.status.mode.get() end,
           cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-          color = Util.ui.fg("Constant"),
+          color = function() return { fg = Snacks.util.color("Constant") } end,
         },
         -- stylua: ignore
         {
           function() return "  " .. require("dap").status() end,
           cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-          color = Util.ui.fg("Debug"),
+          color = function() return { fg = Snacks.util.color("Debug") } end,
         },
-        { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = Util.ui.fg("Special") },
+        {
+          require("lazy.status").updates,
+          cond = require("lazy.status").has_updates,
+          color = function()
+            return { fg = Snacks.util.color("Special") }
+          end,
+        },
       },
       lualine_z = {
         function()

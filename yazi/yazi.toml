@@ -1,4 +1,9 @@
 [opener]
 edit = [
 	{ run = 'nvim "$@"', block = true },
+	{ run = 'code "$@"', block = true },
+]
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
 ]
